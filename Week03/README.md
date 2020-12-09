@@ -14,8 +14,9 @@ stop
 ```
 
 
-ref:https://golang.org/doc/code.html
-
+## ref:
+https://golang.org/doc/code.html
+> 介绍了如何初始化go工程
 https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html
 > 本篇精华:如果你不知道一个goroutine何时停止，那么就不要创建这个goroutine.本篇刚开始直接创建了一个永远不会停止的goroutine，很明显这种goroutine会导致泄露，
 >然后创建了一个不带缓冲区的channel，并且为这个channel创建了一个超时context，最后导致超时无法正常完成数据接收，最后创建了一个带缓冲区的channel，通过这个channel可以实现goroutne之间的数据通信。
