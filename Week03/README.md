@@ -1,7 +1,17 @@
 1.基于 errgroup 实现一个 http server 的启动和关闭 ，以及 linux signal 信号的注册和处理，要保证能够 一个退出，全部注销退出。
 
+代码大概是这样实现的：
+1. 使用根context创建一个协程
+2. 利用1中创建的根context创建子协程（两个http服务和一个信号监听协程）
+3. 出现关闭信号调用cancel，Done接收到关闭信号，关闭http服务。
 
-
+这样就达到了关闭服务，信号协程收到信号，关闭http服务，输出如下日志：
+```
+stop
+stop
+2020/12/09 15:03:28 catch system term signal, quit all server in group
+2020/12/09 15:03:28 http: Server closed
+```
 
 
 ref:https://golang.org/doc/code.html
