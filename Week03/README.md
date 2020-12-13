@@ -1,4 +1,4 @@
-1.基于 errgroup 实现一个 http server 的启动和关闭 ，以及 linux signal 信号的注册和处理，要保证能够 一个退出，全部注销退出。
+1.基于  实现一个 http server 的启动和关闭 ，以及 linux signal 信号的注册和处理，要保证能够 一个退出，全部注销退出。
 
 代码大概是这样实现的：
 1. 使用根context创建一个协程
