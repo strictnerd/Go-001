@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package progolang.api.progolang;
+
+option go_package = "/progolang/api/progolang;progolang";
+option java_multiple_files = true;
+option java_package = "progolang.api.progolang";
+
+service Progolang {
+    rpc CreateProgolang (CreateProgolangRequest) returns (CreateProgolangReply);
+    rpc UpdateProgolang (UpdateProgolangRequest) returns (UpdateProgolangReply);
+    rpc DeleteProgolang (DeleteProgolangRequest) returns (DeleteProgolangReply);
+    rpc GetProgolang (GetProgolangRequest) returns (GetProgolangReply);
+    rpc ListProgolang (ListProgolangRequest) returns (ListProgolangReply);
+}
+
+message CreateProgolangRequest {}
+message CreateProgolangReply {}
+
+message UpdateProgolangRequest {}
+message UpdateProgolangReply {}
+
+message DeleteProgolangRequest {}
+message DeleteProgolangReply {}
+
+message GetProgolangRequest {}
+message GetProgolangReply {}
+
+message ListProgolangRequest {}
+message ListProgolangReply {}
